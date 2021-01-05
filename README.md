@@ -7,7 +7,7 @@ faktury ve formátu ISDOC.
 V této repozitory najdete podpůrné informace a příklady pro
 implementaci podpory formátu ISDOC.PDF do vašich aplikací.
 
-## Knihovny nástroje umožňující generování ISDOC.PDF
+## Knihovny a nástroje umožňující generování ISDOC.PDF
 
 ISDOC.PDF funguje na podobných principech jako německý formát ZUGFeRD
 a francouzský Faktur-X. Následující nástroje tak poslouží i jako
