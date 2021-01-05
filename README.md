@@ -16,7 +16,7 @@ inspirace při implementaci ISDOC.PDF.
 * Python knihovna pro sloučení PDF and XML do PDF/A3
 https://github.com/akretion/factur-x
 
-* Java kniohvna
+* Java knihovna
 https://www.mustangproject.org/
 
 * Generování pomocí komerční knihovny
