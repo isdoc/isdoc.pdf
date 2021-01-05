@@ -1,6 +1,6 @@
 # ISDOC.PDF
 
-ISDOC.PDF je formát pře elektronickou reprezentaci vizuální i obsahové
+ISDOC.PDF je formát pro elektronickou reprezentaci vizuální i obsahové
 stránky faktury. ISDOC.PDF je PDF soubor obsahující XML reprezentaci
 faktury ve formátu ISDOC.
 
