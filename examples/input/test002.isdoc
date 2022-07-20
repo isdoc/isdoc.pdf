@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?> 
-<Invoice xmlns="http://isdoc.cz/namespace/2013" version="6.0.1"><DocumentType>1</DocumentType>
+<Invoice xmlns="http://isdoc.cz/namespace/2013" version="6.0.2">
+<DocumentType>1</DocumentType>
 <TargetConsolidator></TargetConsolidator>
 <ClientOnTargetConsolidator></ClientOnTargetConsolidator>
 <ID>FV-2/2021</ID>
