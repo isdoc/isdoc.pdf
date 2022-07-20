@@ -31,6 +31,19 @@ soubor:
 java -jar bin\isdoc-pdf.jar <vstup.pdf> <vstup.isdoc> <výstup.isdoc.pdf>
 ````
 
+## Jak si prohlížet dokumenty ISDOC.PDF
+
+Dokument ve formátu ISDOC.PDF je obyčejný dokument PDF a vizuální
+podobu faktury si tak můžete prohlédnout v jakémkoliv prohlížeči
+dokumentů PDF, včetně prohlížečů zabudovaných do webového
+prohlížeče. Potřebujete-li se dostat ke vložené strukturované podobě
+faktury v XML, je potřeba použít takový prohlížeč PDF, který umí
+zobrazit přílohy, např. zdarma dostupný Adobe Acrobat Reader. Přílohy
+jsou dostupné po kliknutí na záložku označenou "kancelářskou sponkou",
+viz následující obrázek.
+
+![Ukázka příloh zobrazených v Acrobat Readeru](acroread-attachments.png)
+
 ## Knihovny a nástroje umožňující generování ISDOC.PDF
 
 ISDOC.PDF funguje na podobných principech jako německý formát ZUGFeRD
