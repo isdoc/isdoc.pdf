@@ -1,13 +1,22 @@
 package cz.isdoc.pdf;
 
+import org.apache.jempbox.xmp.XMPMetadata;
+import org.apache.jempbox.xmp.XMPSchemaBasic;
+import org.apache.jempbox.xmp.XMPSchemaPDF;
+import org.apache.jempbox.xmp.pdfa.XMPSchemaPDFAId;
 import org.apache.pdfbox.cos.*;
 import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDDocumentCatalog;
 import org.apache.pdfbox.pdmodel.PDDocumentNameDictionary;
 import org.apache.pdfbox.pdmodel.PDEmbeddedFilesNameTreeNode;
+import org.apache.pdfbox.pdmodel.common.PDMetadata;
 import org.apache.pdfbox.pdmodel.common.filespecification.PDComplexFileSpecification;
 import org.apache.pdfbox.pdmodel.common.filespecification.PDEmbeddedFile;
+import org.apache.pdfbox.pdmodel.documentinterchange.logicalstructure.PDMarkInfo;
+import org.apache.pdfbox.pdmodel.documentinterchange.logicalstructure.PDStructureTreeRoot;
 
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -101,10 +110,28 @@ public class Create {
                     throw new IOException("Unexpected object type for PDFDocument/Catalog/COSDictionary/Item(AF)");
                 }
 
+                PDDocumentCatalog cat = doc.getDocumentCatalog();
+                cat.setStructureTreeRoot(new PDStructureTreeRoot());
+                PDMetadata metadata = new PDMetadata(doc);
+                cat.setMetadata(metadata);
+                XMPMetadata xmp = new XMPMetadata();
+                XMPSchemaPDFAId pdfaid = new XMPSchemaPDFAId(xmp);
+                xmp.addSchema(pdfaid);
+                PDMarkInfo markinfo = new PDMarkInfo();
+                markinfo.setMarked(true);
+                cat.setMarkInfo(markinfo);
+                pdfaid.setPart(3);
+                pdfaid.setConformance("A");
+                pdfaid.setAbout("");
+                metadata.importXMPMetadata(xmp.asByteArray());
+                cat.setMetadata(metadata);
+
                 System.out.println("Writing merged file " + outputFilename + "...");
                 doc.save(new File(outputFilename));
                 System.out.println("Done");
             } catch (IOException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
