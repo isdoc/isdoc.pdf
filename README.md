@@ -46,6 +46,13 @@ viz následující obrázek.
 
 ## Knihovny a nástroje umožňující generování ISDOC.PDF
 
+* [isdoc-pdf](https://github.com/deltazero-cz/isdoc-pdf) - bash skript používající Ghostcript pro převod PDF a ISDOCu do ISDOC.PDF
+
+* [node-isdoc-pdf](https://github.com/deltazero-cz/node-isdoc-pdf) - wrapper pro Node.js výše uvedeného skriptu, kromě tvorby ISDOC.PDF podporuje:
+    * extrahování ISDOC z PDF
+    * vytváření nových faktur ve formátu ISDOC
+    * validování ISDOC vůči XSD schématu
+
 ISDOC.PDF funguje na podobných principech jako německý formát ZUGFeRD
 a francouzský Faktur-X. Následující nástroje tak poslouží i jako
 inspirace při implementaci ISDOC.PDF.
