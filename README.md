@@ -63,6 +63,9 @@ https://github.com/akretion/factur-x
 * Java knihovna (ta posloužila i jako inspirace pro ukázkový příklad)
 https://www.mustangproject.org/
 
+* PHP knihovna umožňující čtení i generování
+https://packagist.org/packages/adawolfa/isdoc
+
 * Generování pomocí komerční knihovny
 https://www.pdflib.com/pdf-knowledge-base/zugferd-and-factur-x/
 
